@@ -28,8 +28,8 @@ jobs:
         with:
           flavor: |
             latest=${{ github.ref == 'refs/heads/master' && 'true' || 'auto' }}
-          #ghcr.io/${{ github.repository }}
           images: |
+            ghcr.io/${{ github.repository }}
             docker.io/${{ github.repository }}
       - name: Container Image Publish
         uses: docker/build-push-action@v6
